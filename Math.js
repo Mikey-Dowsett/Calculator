@@ -64,10 +64,8 @@ function LogKey(e){
         STRING += e;
     } else if(e=="+"||e=="-"||e=="*"||e=="/"||e=="%"||e=="("||e==")"){
         STRING += e;
-    }else if(e=="Enter"){
-        Eval();
-    }else if(e=="c"||e=="C"){
-        Clear();
+    }else if(e=="Enter"){Eval();
+    }else if(e=="c"||e=="C"){Clear();
     }
     document.getElementById("Answer").innerHTML = STRING;
 }
@@ -79,8 +77,7 @@ function Square(){
 }
 
 function Pie(){
-    if(STRING == ""){
-        STRING = Math.PI
+    if(STRING == ""){STRING = Math.PI
     }else{STRING = Math.PI * (STRING);}
     document.getElementById("Answer").innerHTML = STRING;
 }
