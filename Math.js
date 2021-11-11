@@ -17,17 +17,6 @@ function Eval(){
     answer = eval(STRING);
     STRING = answer;
     document.getElementById("Answer").innerHTML = answer;
-    TOTAL++;
-    const eq = document.createElement("p");
-    eq.innerHTML = STRING;
-    document.getElementById("prev").appendChild(eq);
-    if(TOTAL == 6){
-        var list = document.getElementById("prev");
-        var lists = list.getElementsByTagName("p");
-        list.removeChild(lists[0]);
-        TOTAL--;
-    }
-
 }
 
 function Clear(){
