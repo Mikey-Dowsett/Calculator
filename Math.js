@@ -1,6 +1,7 @@
 STRING = "";
 TOTAL = 0;
 PAREN = false;
+RAD = false;
 
 function Add(add){
     if(add == "(" && PAREN == false){
@@ -25,17 +26,20 @@ function Clear(){
 }
 
 function Cos(){
-    STRING = Math.cos(STRING * (Math.PI/180));
+    if(RAD){STRING = Math.cos(STRING * (Math.PI/180));
+    }else{STRING = Math.cos(STRING);}
     document.getElementById("Answer").innerHTML = STRING;
 }
 
 function Sin(){
-    STRING = Math.sin(STRING * (Math.PI/180));
+    if(RAD){STRING = Math.sin(STRING * (Math.PI/180));
+    }else{STRING = Math.sin(STRING);}
     document.getElementById("Answer").innerHTML = STRING;
 }
 
 function Tan(){
-    STRING = Math.tan(STRING  * (Math.PI/180));
+    if(RAD){STRING = Math.tan(STRING * (Math.PI/180));
+    }else{STRING = Math.tan(STRING);}
     document.getElementById("Answer").innerHTML = STRING;
 }
 
@@ -80,4 +84,19 @@ function Pie(){
     if(STRING == ""){STRING = Math.PI
     }else{STRING = Math.PI * (STRING);}
     document.getElementById("Answer").innerHTML = STRING;
+}
+
+function E(){
+    if(STRING == ""){STRING = Math.E;
+    }else{STRING = Math.E * (STRING);}
+    document.getElementById("Answer").innerHTML = STRING;
+}
+
+function Rad(){
+    RAD = !RAD;
+    if(!RAD){
+        document.getElementById("Rad").innerHTML = "Rad";
+    }else{
+        document.getElementById("Rad").innerHTML = "Deg";
+    }
 }
