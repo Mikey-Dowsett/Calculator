@@ -1,6 +1,7 @@
 html{
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
 }
 
 button{
@@ -32,7 +33,7 @@ header{
     background-color: skyblue;
 }
 
-#Answer{
+p{
     height: 50px;
     width: 275px;
     background-color: lightskyblue;
@@ -44,4 +45,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a{
+    /* text-decoration: none; */
+    color: black;
 }

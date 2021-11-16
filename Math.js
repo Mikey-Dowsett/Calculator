@@ -22,7 +22,7 @@ function Eval(){
 
 function Clear(){
     STRING = ""
-    document.getElementById("Answer").innerHTML = "0";
+    document.getElementById("Answer").innerHTML = 0;
 }
 
 function Cos(){
@@ -99,4 +99,18 @@ function Rad(){
     }else{
         document.getElementById("Rad").innerHTML = "Deg";
     }
+}
+
+function Back(){
+    STRING = STRING.slice(0, -1);
+    if(STRING == ""){
+        document.getElementById("Answer").innerHTML = 0;
+    }else{
+        document.getElementById("Answer").innerHTML = STRING;
+    }
+}
+
+function Log(){
+    STRING = Math.log10(STRING);
+    document.getElementById("Answer").innerHTML = STRING;
 }
